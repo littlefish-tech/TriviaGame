@@ -1,24 +1,40 @@
 <!DOCTYPE html>
-
-<html lang="en-us">
-
+<html lang="en">
   <head>
-
-    <meta charset="UTF-8">
-
-    <title>Total Trival Trivia!</title>
-    <link rel="stylesheet" href="css/style.css">
-
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
   </head>
-  <h1>Total Trival Trivia!</h1>
-
-
   <body>
-
-    <!-- Script -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="javascript/app.js"></script>
-
+    <div class="container">
+      <h1 id="title">Trivia Game</h1>
+      <button class="btn btn-success" id="startButton">Start</button>
+      <div id="gameContainer">
+        <h2>Time Remaining: <span id="timeRemaining"></span></h2>
+        <div id="questionDisplay">
+          <div class="question">What is the first letter of the alphabet?</div>
+          <div class="answers">
+            <input type="radio" name="question-1" value="a" /> a<br />
+            <input type="radio" name="question-1" value="b" /> b<br />
+            <input type="radio" name="question-1" value="z" /> z<br />
+            <input type="radio" name="question-1" value="e" /> e
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
-
+  <script src="./script.js"></script>
 </html>
