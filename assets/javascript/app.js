@@ -69,14 +69,14 @@ var numWrong=0;
 for (var i = 0; i < questionArr.length; i++) {
   var currentAnswers = questionArr[i].answers;
   $("#questionsDisplay").append(currentAnswers);
-  if (currentAnswers == correct) {
+  if ($('input[name="radios"]:checked').val() == currentAnswers){
     numCorrect++;
-    document.getElementById("correctTimes").innerHTML = numCorrect;
-  }
-    else{
+    document.getElementById("correctTimes").innerHTML = "Correct Answers: " + numCorrect;
+    } else{
       numWrong++;
-      document.getElementById("incorrectTimes").innerHTML = numWrong;
+    document.getElementById("incorrectTimes").innerHTML = numWrong;
     }
+    console.log(numWrong);
 
     
 }
@@ -96,3 +96,4 @@ $("#submitButton").on("click", function() {
 // setTimeout(function() {
 //   console.log("set time out ran after 3second");
 // }, 3000);
+
