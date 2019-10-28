@@ -6,7 +6,7 @@
 // For not clicked answer, unclicked++
 // when times up, finish and show the result
 
-var displayTime = 60;
+var displayTime = 30;
 var question;
 var answers;
 var correct;
@@ -34,6 +34,7 @@ var questionArr = [
 ];
 console.log(questionArr[0].answers);
 
+
 $("#gameContainer").hide();
 $("#finishContainer").hide();
 
@@ -54,7 +55,7 @@ setInterval(function() {
   console.log("set interval ran after 1 second");
   displayTime--;
   $("#timeRemaining").text(displayTime);
-}, 1000);
+}, 3000);
 
 // for (var i = 0; i < questionArr.length; i++) {
 //   var currentQuestion = questionArr[i].question;
@@ -69,12 +70,12 @@ var numWrong=0;
 for (var i = 0; i < questionArr.length; i++) {
   var currentAnswers = questionArr[i].answers;
   $("#questionsDisplay").append(currentAnswers);
-  if ($('input[name="radios"]:checked').val() == currentAnswers){
+  if ($("input[name='radio']:checked").val() == correct){
     numCorrect++;
-    document.getElementById("correctTimes").innerHTML = "Correct Answers: " + numCorrect;
+    document.getElementById("correctTimes").innerHTML = numCorrect;
     } else{
       numWrong++;
-    document.getElementById("incorrectTimes").innerHTML = numWrong;
+      document.getElementById("incorrectTimes").innerHTML = numWrong;
     }
     console.log(numWrong);
 
