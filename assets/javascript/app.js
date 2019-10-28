@@ -70,17 +70,18 @@ var numWrong=0;
 for (var i = 0; i < questionArr.length; i++) {
   var currentAnswers = questionArr[i].answers;
   $("#questionsDisplay").append(currentAnswers);
-  if ($("input[name='radio']:checked").val() == correct){
+}
+  if ($("input[name='radio']:checked").val() === correct){
     numCorrect++;
     document.getElementById("correctTimes").innerHTML = numCorrect;
-    } else{
+    } else {
       numWrong++;
       document.getElementById("incorrectTimes").innerHTML = numWrong;
     }
     console.log(numWrong);
 
     
-}
+
 
 
 $("#submitButton").on("click", function() {
