@@ -40,9 +40,9 @@ $("#startButton").on("click", function() {
   $("#timeRemaining").text(displayTime);
 });
 
-//setTimeout(function() {
-//console.log("set time out ran after 3second");
-//}, 3000);
+// setTimeout(function() {
+//   console.log("set time out ran after 3second");
+// }, 3000);
 
 setInterval(function() {
   console.log("set interval ran after 1 second");
@@ -50,40 +50,12 @@ setInterval(function() {
   $("#timeRemaining").text(displayTime);
 }, 1000);
 
-var questionContainer = document.getElementById("#questionDisplay");
-var resultsContainer = document.getElementById("#results");
-var submitButton = document.getElementById("#submit");
-
-
-
-
-
 for (var i = 0; i < questionArr.length; i++) {
-var currentQuestion = questionArr[i].question;
-$("#questionsDisplay").append(currentQuestion);
-console.log(currentQuestion);
- 
-var currentAnswer = questionArr[i].answers;
-console.log(currentAnswer);
-if (currentQuestion == questionArr[i].correct)
-
-var radios = document.getElementsByName('rbtn');
-
-for (var i = 0, length = radios.length; i < length; i++) {
-if (radios[i].checked) {
-//         // do whatever you want with the checked radio
-alert(radios[i].value);
-
-
+  var currentQuestion = questionArr[i].question;
+  $("#questionsDisplay").append(currentQuestion);
 
   var radioBtn = $('<input type="radio" name="rbtnCount" />');
   radioBtn.appendTo("#questionDisplay");
-  console.log(radioBtn);
+}
 
-  // $("#questionsDisplay").append(
-  //   $('div/>')
-  // );
-  
-}
-}
-}
+
