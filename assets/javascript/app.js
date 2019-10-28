@@ -55,7 +55,7 @@ setInterval(function() {
   console.log("set interval ran after 1 second");
   displayTime--;
   $("#timeRemaining").text(displayTime);
-}, 3000);
+}, 1000);
 
 // for (var i = 0; i < questionArr.length; i++) {
 //   var currentQuestion = questionArr[i].question;

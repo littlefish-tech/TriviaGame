@@ -22,3 +22,14 @@ body {
     padding-left: 40px;
     padding-right: 40px;
 }
+
+#finishContainer {
+    text-align: center;
+}
+
+#answerContainer {
+   padding-top: 200px;
+   padding-bottom: 200px;
+   padding-left: 200px;
+   padding-right: 200px;
+}
